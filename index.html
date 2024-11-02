@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>「 ✦ Phantom 〰 Purchase ✦ 」</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .background-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background: linear-gradient(130deg, rgb(149, 85, 179), black, rgb(149, 85, 179));
+            background-size: 400% 400%;
+            animation: backgroundMovement 15s ease infinite;
+        }
+
+        @keyframes backgroundMovement {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(44, 44, 62, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            margin: 20px auto;
+            max-width: 80%;
+        }
+
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .navbar .nav-links a:hover {
+            color: #9854b4;
+        }
+
+        .navbar .login-btn {
+            background-color: #9854b4;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .navbar .login-btn:hover {
+            background-color: #b56cc0;
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .container h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .product {
+            background-color: #3d003d;
+            border-radius: 10px;
+            padding: 20px;
+            width: 250px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        .product img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .product h2 {
+            color: #b366ff;
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        .product p {
+            color: #cccccc;
+            font-size: 1em;
+        }
+
+        .footer {
+            background-color: rgba(44, 44, 62, 0.9);
+            padding: 20px;
+            text-align: center;
+            color: #ffffff;
+            margin-top: 20px;
+            box-shadow: 0 0 10px #b366ff;
+            border-radius: 8px;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #b366ff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #9854b4;
+        }
+
+        .footer-no-bg {
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        .footer-no-bg a {
+            color: #b366ff;
+            text-decoration: none;
+        }
+
+        .footer-no-bg a:hover {
+            color: #9854b4;
+        }
+
+        .footer .terms-btn {
+            background-color: #9854b4;
+            color: #ffffff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .purchase-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #9854b4;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+ 
+}
+
+.purchase-btn:hover {
+    background-color: #b56cc0;
+}
+.Install {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #9854b4;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+ 
+}
+
+.Install:hover {
+    background-color: #b56cc0;
+}
+
+
+
+
+        .footer .terms-btn:hover {
+            background-color: #b56cc0;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navbar .nav-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 10p
+                
+            }
+
+            .navbar .login-btn {
+                margin-top: 10px;
+            }
+
+            .container h1 {
+                font-size: 1.8em;
+            }
+            
+            
+            .products {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .product {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<script type="text/javascript" src="https://pay.sellsn.io/embed.min.js"></script>
+<body>
+    <div class="background-animation"></div>
+    <div class="navbar">
+        <div class="logo">
+            <img src="https://i.ibb.co/JFjBrVp/discord-pfp.png" alt="Logo">
+        </div>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="index.html">Purchase</a>
+            <a href="https://discord.gg/HCUKdKkqnF">Discord</a>
+        </div>
+        <button class="login-btn">Tutorial</button>
+    </div>
+    <div class="container">
+        <h1>Explore Our Products</h1>
+        <div class="products">
+            <div class="product">
+                <img src="https://i.ibb.co/G23btp6/Thumbnail-3.png" alt="HWID Spoofer product image">
+                <h2>Lifetime HWID Spoofer</h2>
+                <p>Lifetime access to our HWID changer for a long lasting solution.</p>
+                <button class="purchase-btn" data-sellsn-sid="95f6865b-f07d-4be2-8716-a22ac23088a4" data-sellsn-pid="16737891-6e6a-4b34-8414-c8cb54e1a95c">Purchase</button>
+            </div>
+            <div class="product">
+                <img src="https://i.ibb.co/G23btp6/Thumbnail-3.png" alt="HWID One Time Spoofer product image">
+                <h2>HWID One Time Spoofer</h2>
+                <p>One-time access to our HWID changer for a quick and easy solution.</p>
+                <button class="purchase-btn" data-sellsn-sid="95f6865b-f07d-4be2-8716-a22ac23088a4" data-sellsn-pid="571c1da6-deee-4f71-b8b1-903d01710573">Purchase</button>
+                
+            </div>
+            <div class="product">
+                <img src="https://i.ibb.co/fdtTFrX/free.png" alt="Free Spoofer product image">
+                <h2>Free Spoofer</h2>
+                <p>Change your HWID for free in a risky manner.</p>
+               <br>
+               <br>        
+                <button class="Install">Install</button>
+
+            </div>
+        </div>
+        
+        
+        <div class="footer-no-bg">
+            Prices may vary. Go to our <a href="https://discord.gg/HCUKdKkqnF">Discord</a> for the latest updates!
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2024 Phantom. All rights reserved.</p>
+        <button class="terms-btn">Terms and Conditions</button>
+    </div>
+
+    <script>
+        document.querySelectorAll('.Install').forEach(button => {
+            button.addEventListener('click', () => {
+                window.open('https://gofile.io/d/NEQnuD', '_blank');
+            });
+        });
+    </script>
+</body>
+</html>
